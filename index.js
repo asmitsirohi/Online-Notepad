@@ -8,8 +8,8 @@ const querystring = require('querystring');
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'appujaat9761@gmail.com',
-        pass: '9761Abc@25'
+        user: 'certificatemaker008@gmail.com',
+        pass: 'DU5p7VirjUjUS2j'
     }
 });
 
@@ -61,8 +61,6 @@ const server = http.createServer((req, res) => {
 
     if (req.method === 'POST') {
         collectRequestData(req, result => {
-            console.log(result);
-
             let mailOptions = {
                 from: 'noreply@gmail.com',
                 to: result.sender,

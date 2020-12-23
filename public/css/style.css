@@ -1,3 +1,8 @@
+body {
+    font-family: 'Langar', cursive;
+    font-size: large;
+}
+
 a {
     cursor: pointer;
 }
@@ -10,10 +15,6 @@ a {
     background:#fdf8c8 !important;
     font-family: 'Times New Roman', Times, serif;
     font-size: large !important;   
-}
-
-input {
-    font-family: 'Times New Roman', Times, serif;
 }
 
 span {
