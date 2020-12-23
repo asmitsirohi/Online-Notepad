@@ -1,0 +1,21 @@
+a {
+    cursor: pointer;
+}
+
+.fas {
+    font-size: 30px;
+}
+
+#textbox {
+    background:#fdf8c8 !important;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large !important;   
+}
+
+input {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+span {
+    font-size: large !important ;
+}
