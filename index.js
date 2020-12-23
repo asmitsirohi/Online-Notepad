@@ -8,8 +8,8 @@ const querystring = require('querystring');
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'certificatemaker008@gmail.com',
-        pass: 'DU5p7VirjUjUS2j'
+        user: 'certificatemaker008@gmail.com' || process.env.EMAIL,
+        pass: 'DU5p7VirjUjUS2j' || process.env.PASSWORD
     }
 });
 
