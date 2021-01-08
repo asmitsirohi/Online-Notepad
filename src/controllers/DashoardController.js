@@ -9,7 +9,8 @@ class DashboardController {
             if (err) console.log(err);
 
             let dataString = data.toString();
-            let dataArr = dataString.split('\r\n');
+            let dataArr = dataString.split('|');
+            console.log(dataArr);
 
             let params = { title: 'Notepad', dataArr, mailResponse: false };
             res.status(200).render('dashboard', params);
@@ -50,7 +51,8 @@ class DashboardController {
                     if (err) console.log(err);
 
                     let dataString = data.toString();
-                    let dataArr = dataString.split('\r\n');
+                    let dataArr = dataString.split('|');
+                    console.log(dataArr);
 
                     let params = { title: 'Notepad', dataArr , mailResponse};
                     res.status(200).render('dashboard', params);
