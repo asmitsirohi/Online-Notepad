@@ -1,0 +1,62 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="/">Nodepad</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active ml-3">
+                <a class="nav-link" data-toggle="tooltip" data-placement="bottom" title="New File" id="newFile"><i
+                        class="fas fa-file"></i> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ml-3">
+                <a class="nav-link" data-toggle="tooltip" data-placement="bottom" title="Save File" id="save"><i
+                        class="fas fa-save"></i> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ml-3">
+                <a class="nav-link" data-toggle="tooltip" data-placement="bottom" title="Send File as Mail"
+                    id="sendMailBtn"><i class="fas fa-envelope"></i> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ml-3 mt-2">
+                <select class="custom-select custom-select-sm mr-sm-2" id="fontsize" data-toggle="tooltip" data-placement="bottom" title="Font Size">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18" selected>18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                    <option value="24">24</option>
+                    <option value="26">26</option>
+                    <option value="28">28</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                    <option value="72">72</option>                    
+                </select>
+            </li>
+            <li class="nav-item active ml-3 mt-2 mr-2">
+                <input type="button" id="fontcolor" value="#3f3f3f" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Font Color" style="background-color: #3f3f3f;">
+            </li>
+            <li class="nav-item active ml-4 mt-2">
+                <select class="custom-select custom-select-sm mr-sm-2" id="fontfamily" data-toggle="tooltip" data-placement="bottom" title="Font Family">
+                    <% if (dataArr != null) { %>
+                        <% dataArr.forEach(element => { %>
+                            <option value="<%- element %> "><%- element %></option>
+                        <% }) %>
+                    <% } %>
+                </select>
+            </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0 text-light">
+            <span class="badge badge-light">Typing Speed:</span>&nbsp;&nbsp;
+            <span class="badge badge-light" id="typingSpeed">0 WPM</span>
+        </div>
+    </div>
+</nav>
+<!-- navbar -->

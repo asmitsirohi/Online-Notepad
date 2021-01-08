@@ -1,0 +1,62 @@
+<!-- Modal -->
+<div class="modal fade" id="mainModal" tabindex="-1" role="dialog" aria-labelledby="mainModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger font-weight-bold" id="mainModalLabel">Alert</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center " id="msg"></h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" id="newFileBtn">Yes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+
+<!-- Mail Modal -->
+<div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="mailModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-light font-weight-bold" id="mailModalLabel">Send as Mail</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="/" method="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="sender" class="col-form-label">To:</label>
+                        <input type="email" class="form-control form-control-sm" id="sender" name="sender"
+                            placeholder="johndoe@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="col-form-label">Subject:</label>
+                        <input type="text" class="form-control form-control-sm" id="subject" name="subject"
+                            placeholder="Write Subject here..." required>
+                    </div>
+                    <input type="hidden" name="hiddenData" id="hiddenData">
+                    <div class="form-group">
+                        <label for="msgBody" class="col-form-label">Body(Optional):</label>
+                        <textarea class="form-control form-control-sm" id="msgBody" name="msgBody"
+                            placeholder="Write Body Here..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-info btn-sm" name="sendBtn" value="Send Mail">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Mail Modal -->

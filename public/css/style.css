@@ -14,9 +14,23 @@ a {
 #textbox {
     background:#fdf8c8 !important;
     font-family: 'Times New Roman', Times, serif;
-    font-size: large !important;   
+    font-size: 18px;   
 }
 
 span {
     font-size: large !important ;
+}
+
+select {
+    cursor: pointer;
+}
+
+#fontfamily {
+    max-width: 30%;
+}
+
+@media only screen and (max-width: 991px) {
+    #fontfamily {
+        max-width: 100%;
+    }
 }

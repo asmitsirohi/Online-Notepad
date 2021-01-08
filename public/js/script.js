@@ -1,10 +1,14 @@
 $(document).ready(() => {
+    $('#textbox').css('height', `${$(document).innerHeight() - $('.navbar').innerHeight() - 52}px`);
+    
     let globalTime = new Date();
-
+    
     let rawData = localStorage.getItem('rawData');
     if(rawData != '') {
         $('#textbox').val(rawData);
     }
+    
+    $('#hiddenData').val($('#textbox').val());
     
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
@@ -67,7 +71,25 @@ $(document).ready(() => {
 
     $('#sendMailBtn').click(() => {
         $('#mailModal').modal('toggle');
+    });
 
+    // $('#fontsize').editableSelect();
 
+    $('#fontsize').change(() => {
+        let fontValue = $('#fontsize').val();       
+        $('#textbox').css("fontSize", `${fontValue}px`);
+    });    
+
+    $('#fontcolor').change(() => {
+        let color = $('#fontcolor').val();
+        $('#textbox').css('color', color);
+        $('#fontcolor').css('background', color);
+    });
+
+    $('#fontcolor').colorpicker({showOn:'focus', hideButton: true});
+
+    $('#fontfamily').change(() => {
+        let fonts = $('#fontfamily').val();
+        $('#textbox').css("fontFamily", fonts);
     });
 });

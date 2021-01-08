@@ -1,0 +1,26 @@
+<%- include('./partials/navbar') %> 
+<% if (mailResponse) { %>
+    <%- include('./partials/alerts') %> 
+<% } %>
+<%- include('./partials/modals') %> 
+
+<div class="p-2 bg-dark text-light" id="saveFilename" style="display: none;">
+    <form class="form-inline">
+        <div class="form-group">
+            <p>Enter File name: </p>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control form-control-sm" id="filename" placeholder="filename.txt">
+        </div>
+        <button type="button" class="btn btn-success mb-2 mr-2 btn-sm" id="confirmSave">Save</button>
+        <button type="button" class="btn btn-danger mb-2 btn-sm" id="cancelSave">Cancel</button>
+    </form>
+</div>
+
+<div class="container-fluid">
+    <div class="form-group">
+        <textarea class="form-control mt-4 mb-1" id="textbox" rows="18" placeholder="Start Writing from here...."
+            autofocus></textarea>
+    </div>
+</div>
+
