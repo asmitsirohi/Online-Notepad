@@ -10,7 +10,6 @@ class DashboardController {
 
             let dataString = data.toString();
             let dataArr = dataString.split('|');
-            console.log(dataArr);
 
             let params = { title: 'Notepad', dataArr, mailResponse: false };
             res.status(200).render('dashboard', params);
@@ -29,7 +28,7 @@ class DashboardController {
         });
 
         let mailOptions = {
-            from: 'noreply@gmail.com',
+            from: 'noreply<>noreply@gmail.com',
             to: req.body.sender,
             subject: req.body.subject,
             html: req.body.msgBody,
@@ -52,7 +51,6 @@ class DashboardController {
 
                     let dataString = data.toString();
                     let dataArr = dataString.split('|');
-                    console.log(dataArr);
 
                     let params = { title: 'Notepad', dataArr , mailResponse};
                     res.status(200).render('dashboard', params);
