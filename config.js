@@ -1,6 +1,6 @@
 let authentication = {
-    username : 'onlinenotepad008@gmail.com',
-    password : 'beFqRhpu9qqM8CB'
+    username : '[Enter Username Here]',
+    password : '[Enter Password]'
 };
 
 module.exports = authentication;
