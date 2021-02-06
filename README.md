@@ -6,7 +6,6 @@
 ## Live Demo
 https://online-note-pad.herokuapp.com
 
-----
 ## Instructions to run
 
 ### Step 1
@@ -39,6 +38,8 @@ $ npm start
 
 ## Video
 
-<iframe width="560" height="315" src="public/assets/video/onlineNotepad.mp4"
-    allow=" autoplay;gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
+
+<video width="400" controls>
+  <source src="public/assets/video/onlineNotepad.mp4" type="video/mp4">
+  Your browser does not support HTML video.
+</video>
